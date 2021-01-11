@@ -14,7 +14,10 @@ body {
   min-height: 100%;
   min-height: 100vh;
   line-height: 1.5;
-  font-size: 2rem;
+	font-size: 2rem;
+	background: linear-gradient(180deg, pink, white);
+	z-index: 1;
+	position: relative;
 }
 
 img,
@@ -32,3 +35,49 @@ select {
   font: inherit; 
   letter-spacing: inherit;
 }
+
+#container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid black;
+	background: grey;
+	display: grid;
+	grid-template: repeat(8, 1fr) / repeat(4, 1fr);
+	min-height: 600px;
+	min-width: 400px;
+	border-radius: 30%;
+	overflow:hidden;
+	box-shadow: 0 0 10px 2px black;
+}
+
+.numbers {
+	height: 100%;
+	width: 100%;
+	background: red;
+	border: 2px black solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#zero {
+	grid-area: 2 span;
+}
+#three {
+	grid-area: 2 span;
+}
+#eight {
+	grid-area: 3 / 3 / 4 / 3 ;
+}
+#nine {
+	grid-area: 3 / 4 / 4 / 5 ;
+}
+
+#screen {
+	grid-area: 4 / 1 / 6 / 5;
+	background: white;
+}
+
+
