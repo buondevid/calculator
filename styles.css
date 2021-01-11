@@ -50,6 +50,7 @@ select {
 	border-radius: 30%;
 	overflow:hidden;
 	box-shadow: 0 0 10px 2px black;
+	font-family: "Sailec-Regular",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;;
 }
 
 .numbers {
@@ -74,10 +75,30 @@ select {
 #nine {
 	grid-area: 3 / 4 / 4 / 5 ;
 }
+#equal {
+	grid-area: 8 / 1 / 9 / 5;
+}
+#clear {
+	grid-column: 2 / 4;
+}
 
 #screen {
 	grid-area: 4 / 1 / 6 / 5;
 	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+}
+
+.operators {
+	height: 100%;
+	width: 100%;
+	background: red;
+	border: 2px black solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 
