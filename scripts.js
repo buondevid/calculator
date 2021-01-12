@@ -32,3 +32,23 @@ function operate(operator, a, b) {
 	default:
 	}
 }
+
+function clearScreen() {
+	screen.textContent = '';
+}
+
+
+const clear = document.getElementById('clear')
+const screen = document.getElementById('screen');
+const container = document.getElementById('container');
+
+clear.addEventListener('click', clearScreen);
+
+container.addEventListener('click', (e) => {
+	if (e.target.classList.contains('numbers')) {
+		const number = e.target.textContent;
+		const before = screen.textContent;
+		screen.textContent = before + number;
+		console.log(number);
+	}
+});
