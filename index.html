@@ -1,34 +1,37 @@
 <!DOCTYPE html>
+
 <head>
-<title>page-title</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
-<meta name="description" content="A description of the page">
+	<title>page-title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+	<meta name="description" content="A description of the page">
 </head>
 
 <body>
 	<div id='container'>
-		<div class='numbers' id='zero'>0</div>
-		<div class='numbers' id='one'>1</div>
-		<div class='numbers' id='to'>2</div>
-		<div class='numbers' id='three'>3</div>
-		<div class='numbers' id='four'>4</div>
-		<div class='numbers' id='five'>5</div>
-		<div class='numbers' id='six'>6</div>
-		<div class='numbers' id='seven'>7</div>
-		<div class='numbers' id='eight'>8</div>
-		<div class='numbers' id='nine'>9</div>
-		<p id='screen'></p>
-		<div class='operators' id='plus'>+</div>
-		<div class='operators' id='minus'>-</div>
-		<div class='operators' id='multi'>*</div>
-		<div class='operators' id='fract'>/</div>
-		<div class='operators' id='point'>.</div>
-		<div class='operators' id='clear'>A/C</div>
-		<div class='operators' id='negative'>+ / -</div>
-		<div class='operators' id='equal'>=</div>
-	</div>
+		<div class='numbers' data-key='48' id='zero'>0</div>
+		<div class='numbers' data-key='49' id='one'>1</div>
+		<div class='numbers' data-key='50' id='to'>2</div>
+		<div class='numbers' data-key='51' id='three'>3</div>
+		<div class='numbers' data-key='52' id='four'>4</div>
+		<div class='numbers' data-key='53' id='five'>5</div>
+		<div class='numbers' data-key='54' id='six'>6</div>
+		<div class='numbers' data-key='55' id='seven'>7</div>
+		<div class='numbers' data-key='56' id='eight'>8</div>
+		<div class='numbers' data-key='57' id='nine'>9</div>
+		<div id='screen'></div>
+		<div class='operators' data-key='187' id='plus'>+</div>
+		<div class='operators' data-key='189' id='minus'>-</div>
+		<div class='operators' data-key='170' id='multi'>*</div>
+		<div class='operators' data-key='191' id='fract'>/</div>
+		<div class='operators' data-key='190' id='point'>.</div>
+		<div class='operators' data-key='46' id='clear'>A/C</div>
+		<div class='operators' data-key='8' id='back'>
+			&#8592;&#8592;</div>
+				<div class='operators' data-key='192' id='negative'>+ / -</div>
+				<div class='operators' data-key='13' id='equal'>=</div>
+		</div>
 
-	<script src="scripts.js"></script>
+		<script src="scripts.js"></script>
 </body>
