@@ -146,5 +146,7 @@ a {
 @media (max-width: 500px) {
 	#container {
 		margin: 2rem auto;
+		min-height: 500px;
+		width: 333px;
 	}
 }
