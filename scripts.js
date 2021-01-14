@@ -122,7 +122,11 @@ container.addEventListener('click', (e) => {
 		oper = 'divOp';
 	} else if (e.target.textContent === '.') {
 		if (screen.textContent.match(/\./));
-		else {
+		else if (screen.textContent === '') {
+			const number = e.target.textContent;
+			const before = 0;
+			screen.textContent = before + number;
+		} else {
 			const number = e.target.textContent;
 			const before = screen.textContent;
 			screen.textContent = before + number;
