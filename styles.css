@@ -142,3 +142,9 @@ a {
 	80% {transform: scale(1.2);}
 	100% {transform: scale(1);}
 }
+
+@media (max-width: 500px) {
+	#container {
+		margin: 2rem auto;
+	}
+}
