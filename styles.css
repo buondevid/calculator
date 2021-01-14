@@ -48,7 +48,7 @@ a {
 	width: 400px;
 	border-radius: 120px;
 	overflow: hidden;
-	box-shadow: 0 0 10px 2px black;
+	box-shadow: 0 4px 12px 2px black;
 }
 
 .numbers {
