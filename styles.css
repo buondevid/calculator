@@ -7,17 +7,16 @@
 }
 
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
+	min-height: 100%;
 }
 
 body {
   min-height: 100%;
-  min-height: 100vh;
   line-height: 1.5;
 	font-size: 2rem;
 	background: linear-gradient(180deg, pink, white);
-	z-index: 1;
-	position: relative;
+	font-family: 'Avenir';
 }
 
 img,
@@ -29,42 +28,60 @@ picture {
 input,
 button,
 textarea,
-select {
+select,
+a {
   font: inherit;
   color: inherit; 
   font: inherit; 
-  letter-spacing: inherit;
+	letter-spacing: inherit;
+	outline: none;
+	text-decoration: none;
 }
 
 #container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	margin: 6rem auto;
 	border: 2px solid black;
 	background: grey;
 	display: grid;
-	grid-template: repeat(8, 1fr) / repeat(4, 1fr);
+	grid-template: 78px 78px 78px repeat(2, 1fr) 78px 78px 78px / repeat(4, 1fr);
 	min-height: 600px;
-	min-width: 400px;
-	border-radius: 30%;
-	overflow:hidden;
+	width: 400px;
+	border-radius: 120px;
+	overflow: hidden;
 	box-shadow: 0 0 10px 2px black;
-	font-family: "Sailec-Regular",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;;
 }
 
 .numbers {
 	height: 100%;
 	width: 100%;
-	background: red;
-	border: 2px black solid;
+	border: 1px rgba(0,0,0, 0.6) solid;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	box-shadow: inset 0 0 0px 5px rgba(0,0,0,0.3);
+	font-family: 'Avenir';
+	font-weight: bold;
+	background: #3066BE;
 }
+
+.numbers:active, .operators:active {
+	box-shadow: inset 0 0 0px 1000px rgba(0,0,0,0.3);
+}
+
+.active {
+	box-shadow: inset 0 0 0px 1000px rgba(0,0,0,0.3);
+}
+
+
 
 #zero {
 	grid-area: 2 span;
+}
+#one{
+	border-top: none;
+}
+#two {
+	border-top: none;
 }
 #three {
 	grid-area: 2 span;
@@ -77,29 +94,47 @@ select {
 }
 #equal {
 	grid-area: 8 / 1 / 9 / 5;
+	background-color:  #E4FDE1;
+	border-bottom: none;
 }
 #clear {
 	grid-column: 2 / 3;
+	background: #E4FDE1;
+}
+#back {
+	background: #E4FDE1;
 }
 
 #screen {
 	grid-area: 4 / 1 / 6 / 5;
-	background: white;
+	padding: 1rem;
+	background: black;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 3.5rem;
 	word-break: break-all;
+	color:  #E4FDE1;
 }
 
 .operators {
 	height: 100%;
 	width: 100%;
-	background: red;
-	border: 2px black solid;
+	border: 1px rgba(0,0,0, 0.6) solid;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	box-shadow: inset 0 0 0px 5px rgba(0,0,0,0.3);
+	font-family: 'Avenir';
+	font-weight: bold;
+	background-color: #F45B69;
+	font-size: 2.2rem;
 }
 
-
+.signature {
+	text-align:center;
+	padding: 1rem;
+	font-size: 1.5rem; 
+	white-space: pre;
+	opacity: 0.6;
+}

@@ -31,6 +31,8 @@ function operate(operator, a, b) {
 	return result;
 }
 
+const audio = document.querySelector('audio');
+audio.volume = 0.3;
 const screen = document.getElementById('screen');
 const container = document.getElementById('container');
 let screenContent = [];
@@ -49,13 +51,20 @@ function checkZero() {
 	}
 }
 
+/* ------------------------- keyboard event listener ------------------------ */
 document.addEventListener('keydown', (e) => {
-	console.log(e);
-	const key = document.querySelector(`div[data-key='${e.keyCode}']`);
-	key.click();
+	const keys = document.querySelector(`button[data-key='${e.keyCode}']`);
+	audio.currentTime = 0;
+	audio.play();
+	keys.classList.add('active');
+	keys.click();
+	setTimeout(() => keys.classList.remove('active'), 100);
 });
 
+/* -------------------------- click event listener -------------------------- */
 container.addEventListener('click', (e) => {
+	audio.currentTime = 0;
+	audio.play();
 	if (e.target.classList.contains('numbers')) {
 		if (i !== 0) {
 			const number = e.target.textContent;
@@ -119,17 +128,17 @@ container.addEventListener('click', (e) => {
 			screen.textContent = before + number;
 		}
 	} else if (e.target.textContent === '+ / -') {
-		screen.textContent *= -1;
+		if (screen.textContent !== '.') {
+			screen.textContent *= -1;
+		}
 	} else if (e.target.textContent === 'A/C') {
 		clearScreen();
-	} else if (e.target.textContent === '<--') {
+	} else if (e.target.id === 'back') {
 		screen.textContent = screen.textContent.slice(0, -1);
 	} else if (e.target.textContent === '=' && oper !== '=') {
 		screenContent.push(Number(screen.textContent));
-		console.log(screenContent);
 		checkZero();
 		if (screenContent.length === 2) {
-			console.log(oper);
 			const result = operate(oper, screenContent[0], screenContent[1]);
 			screen.textContent = Math.round(result * 10000) / 10000;
 			screenContent = [];
