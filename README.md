@@ -35,7 +35,7 @@ It's a basic web calculator, only for real math lovers.
 
 * Study and use more RegEx since they are really useful in strings and arrays manipulation.
 * Try to rely less on `if` statements.
-* Learn more about mobile-first approach.
+* Practice more the mobile-first approach.
 
 ## Author
 
